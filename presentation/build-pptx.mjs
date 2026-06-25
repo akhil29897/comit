@@ -310,7 +310,7 @@ function note(s, text) {
   const s = slide(C.green);
   wordmark(s, { x: 0.62, y: 2.2, size: 96 });
   s.addText("commit to the people who matter", { x: 0.7, y: 3.75, w: 11, h: 0.7, fontFace: SANS, fontSize: 28, color: C.white });
-  s.addText("github.com/takhil/comit  ·  MIT", { x: 0.7, y: 4.5, w: 11, h: 0.5, fontFace: SANS, fontSize: 18, color: "9FE9D2" });
+  s.addText("github.com/akhil29897/comit  ·  MIT", { x: 0.7, y: 4.5, w: 11, h: 0.5, fontFace: SANS, fontSize: 18, color: "9FE9D2" });
   s.addText("A small daily commit — to your relationships, and your off-hours.", { x: 0.7, y: 5.2, w: 11, h: 0.5, fontFace: SANS, fontSize: 15, color: C.faint });
 }
 

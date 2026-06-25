@@ -5,7 +5,7 @@
 [Bun](https://bun.sh) ≥ 1.1 is the only requirement. Bun runs the TypeScript directly — there's no build step.
 
 ```bash
-git clone https://github.com/takhil/comit.git
+git clone https://github.com/akhil29897/comit.git
 cd comit
 ```
 

@@ -11,7 +11,7 @@ Thanks for considering a contribution! `comit` is built to be forked, read, and 
 ## Getting started
 
 ```bash
-git clone https://github.com/takhil/comit.git
+git clone https://github.com/akhil29897/comit.git
 cd comit
 bun install        # dev types only
 bun test           # should be green

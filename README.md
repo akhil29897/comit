@@ -65,7 +65,7 @@ Messaging apps are great at telling you about *unread* messages. They're terribl
 You need [Bun](https://bun.sh) (≥ 1.1). No install step is required to run — Bun executes the TypeScript directly.
 
 ```bash
-git clone https://github.com/takhil/comit.git
+git clone https://github.com/akhil29897/comit.git
 cd comit
 
 # Run the full report against bundled, synthetic demo data:
