@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>comit — commit to the people who matter</title>
+    <meta
+      name="description"
+      content="A privacy-first, offline WhatsApp work-life-balance companion: interaction scores, reply-debt tracking, and gentle nudges. Zero dependencies, MIT."
+    />
+    <meta name="theme-color" content="#075E54" />
+    <meta property="og:title" content="comit — commit to the people who matter" />
+    <meta
+      property="og:description"
+      content="A privacy-first WhatsApp work-life-balance companion. Interaction scores, reply-debt tracking, nudges — computed entirely on your device."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://akhil29897.github.io/comit/" />
+    <meta property="og:image" content="https://akhil29897.github.io/comit/social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>"
+    />
+    <style>
+      :root {
+        --green: #075e54;
+        --green2: #128c7e;
+        --accent: #008069;
+        --bright: #25d366;
+        --cream: #efeae2;
+        --text: #111b21;
+        --muted: #5b6b66;
+        --border: #e2ddd5;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(900px 500px at 50% -5%, #d7efe6, transparent),
+          var(--cream);
+        -webkit-font-smoothing: antialiased;
+      }
+      .hero {
+        background: linear-gradient(165deg, var(--green), var(--green2) 60%, var(--bright));
+        color: #fff;
+        padding: 64px 24px 56px;
+        text-align: center;
+      }
+      .hero .mark {
+        font-size: 40px;
+        opacity: 0.95;
+      }
+      .hero h1 {
+        margin: 6px 0 6px;
+        font-size: clamp(52px, 12vw, 84px);
+        font-weight: 800;
+        letter-spacing: -3px;
+      }
+      .hero .tag {
+        font-size: clamp(17px, 3vw, 22px);
+        margin: 0 0 6px;
+      }
+      .hero .sub {
+        color: #d9f3ec;
+        max-width: 620px;
+        margin: 10px auto 26px;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .pillrow {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 26px;
+      }
+      .pillrow span {
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 999px;
+        padding: 5px 13px;
+        font-size: 13px;
+      }
+      .btns {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .btn.primary {
+        background: #fff;
+        color: var(--green);
+      }
+      .btn.ghost {
+        background: rgba(255, 255, 255, 0.14);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      main {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 48px 24px 30px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 26px 22px;
+        text-decoration: none;
+        color: var(--text);
+        box-shadow: 0 2px 10px rgba(11, 20, 26, 0.06);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        display: block;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 26px rgba(7, 50, 42, 0.14);
+      }
+      .card .ico {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      .card h3 {
+        margin: 0 0 6px;
+        font-size: 20px;
+      }
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .card .go {
+        margin-top: 14px;
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      footer {
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+        padding: 30px 24px 50px;
+      }
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      @media (max-width: 760px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="mark">✦</div>
+      <h1>comit</h1>
+      <p class="tag">commit to the people who matter</p>
+      <p class="sub">
+        A privacy-first, fully offline WhatsApp work-life-balance companion. Interaction scores,
+        reply-debt tracking, and gentle nudges — computed entirely on your device.
+      </p>
+      <div class="pillrow">
+        <span>100% offline</span>
+        <span>zero runtime deps</span>
+        <span>MIT</span>
+        <span>your messages never leave your device</span>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/akhil29897/comit">★ View on GitHub</a>
+        <a class="btn ghost" href="deck/comit.pptx" download>⤓ Download deck (.pptx)</a>
+      </div>
+    </section>
+
+    <main>
+      <div class="grid">
+        <a class="card" href="dashboard/">
+          <div class="ico" style="background: #008069">▤</div>
+          <h3>Dashboard</h3>
+          <p>The web dashboard — interaction scores, work-life balance, reply debt and nudges, on demo data.</p>
+          <div class="go">Open dashboard →</div>
+        </a>
+        <a class="card" href="prototype/">
+          <div class="ico" style="background: #25d366">▢</div>
+          <h3>iPhone prototype</h3>
+          <p>A WhatsApp-style mobile prototype — Launch, Today, People and Balance, framed on iPhone 15.</p>
+          <div class="go">View prototype →</div>
+        </a>
+        <a class="card" href="deck/">
+          <div class="ico" style="background: #128c7e">◳</div>
+          <h3>Slide deck</h3>
+          <p>The pitch deck — the problem, the features, the privacy story, and how it's built.</p>
+          <div class="go">Open deck →</div>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      Built by Akhil Tripathi · <a href="https://github.com/akhil29897/comit">github.com/akhil29897/comit</a>
+      · runs fully offline, nothing leaves your device.
+    </footer>
+  </body>
+</html>

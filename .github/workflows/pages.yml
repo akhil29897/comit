@@ -1,12 +1,17 @@
-# Publishes the reveal.js presentation to GitHub Pages.
+# Publishes a landing page + the dashboard, iPhone prototype, and slide deck to GitHub Pages.
 # Enable it once: repo Settings → Pages → Source: "GitHub Actions".
-name: Deploy presentation to Pages
+name: Deploy site to Pages
 
 on:
   push:
     branches: [main]
     paths:
+      - "pages/**"
+      - "prototype/**"
       - "presentation/**"
+      - "src/web/**"
+      - "fixtures/**"
+      - "docs/images/social-preview.png"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -20,17 +25,48 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Assemble site
+        run: |
+          set -e
+          mkdir -p _site/dashboard _site/prototype _site/deck
+
+          # Landing page + social image
+          cp pages/index.html _site/index.html
+          cp docs/images/social-preview.png _site/social-preview.png
+
+          # iPhone prototype (static, self-contained)
+          cp prototype/index.html prototype/prototype.css prototype/prototype.js _site/prototype/
+
+          # Slide deck (+ downloadable pptx)
+          cp presentation/index.html presentation/deck.css presentation/deck.js _site/deck/
+          cp presentation/comit.pptx _site/deck/comit.pptx
+
+          # Dashboard — static copy + a pre-rendered report so it works without a server
+          cp src/web/public/index.html src/web/public/styles.css src/web/public/app.js _site/dashboard/
+          bun run src/cli/index.ts report fixtures/sample-export --me Akhil \
+            --config fixtures/comit.config.json --json > _site/dashboard/report.json
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - name: Upload presentation
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: presentation
       - id: deployment
         uses: actions/deploy-pages@v4

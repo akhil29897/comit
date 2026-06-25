@@ -19,11 +19,26 @@ const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmtHour = (h) => `${((h + 11) % 12) + 1} ${h < 12 ? "AM" : "PM"}`;
 
+async function loadReport() {
+  // Live dashboard: the Bun server exposes /api/report.
+  try {
+    const res = await fetch("/api/report");
+    if (res.ok) {
+      const r = await res.json();
+      if (!r.error) return r;
+    }
+  } catch {
+    /* not running as a server — fall through to the static snapshot */
+  }
+  // Static hosting (e.g. GitHub Pages): a pre-rendered report.json sits beside this page.
+  const res = await fetch("report.json");
+  return res.json();
+}
+
 async function main() {
   let report;
   try {
-    const res = await fetch("/api/report");
-    report = await res.json();
+    report = await loadReport();
     if (report.error) throw new Error(report.error);
   } catch (err) {
     document.getElementById("app").innerHTML = `<div class="loading">Could not load report: ${esc(
