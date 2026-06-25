@@ -78,7 +78,7 @@ function statRow(r, owed) {
 
 function nudgesPanel(nudges) {
   if (!nudges.length) {
-    return `<section class="panel"><h2>Nudges</h2><div class="empty">✦ All clear — nothing nagging right now.</div></section>`;
+    return `<section class="panel nudges"><h2>Nudges</h2><div class="empty"><span class="tick">✓✓</span> All clear — nothing nagging right now.</div></section>`;
   }
   const items = nudges
     .map((n) => {
@@ -89,7 +89,7 @@ function nudgesPanel(nudges) {
       </div>`;
     })
     .join("");
-  return `<section class="panel"><h2>Nudges · what to do</h2>${items}</section>`;
+  return `<section class="panel nudges"><h2>Nudges · what to do</h2>${items}</section>`;
 }
 
 function contactsPanel(scores, owed) {
@@ -99,18 +99,18 @@ function contactsPanel(scores, owed) {
       const catClass = s.isGroup ? "group" : s.category;
       const catLabel = s.isGroup ? "group" : s.category;
       const last = s.stats.lastContactDays < 1 ? "today" : `${Math.round(s.stats.lastContactDays)}d ago`;
-      const oweBadge = owedSet.has(s.contact)
-        ? `<div class="owe">owe · ${esc(owedSet.get(s.contact))}</div>`
+      const oweLine = owedSet.has(s.contact)
+        ? `<div class="oweline">↩ owe a reply · ${esc(owedSet.get(s.contact))}</div>`
         : "";
       return `<div class="contact">
-        ${oweBadge}
         ${ring(s.score, s.grade)}
-        <div>
+        <div class="cbody">
           <div class="name">${esc(s.contact)}</div>
           <div class="sub">${esc(s.grade)} · last ${last}</div>
           <div class="sub">${s.stats.sent}↑ / ${s.stats.received}↓ &nbsp; <span class="chip ${catClass}">${esc(
             catLabel,
           )}</span></div>
+          ${oweLine}
         </div>
       </div>`;
     })
