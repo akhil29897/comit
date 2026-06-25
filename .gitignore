@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+bun.lockb
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local environment
+.env
+.env.local
+
+# Real WhatsApp exports — NEVER commit personal chat data.
+# Only the synthetic fixtures/ samples belong in git.
+exports/
+*.whatsapp.txt
+my-chats/
+data/
+
+# comit local cache / generated reports
+.comit/
+reports/
+*.comit.json

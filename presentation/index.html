@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>comit — deck</title>
+    <link rel="stylesheet" href="deck.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="progress"><div class="bar" id="bar"></div></div>
+    <main id="deck">
+      <!-- 1 -->
+      <section class="slide title">
+        <div class="kicker">open-source · privacy-first</div>
+        <h1 class="wordmark">comit</h1>
+        <p class="lead">commit to the people who matter</p>
+        <p class="sub">A work-life-balance companion for WhatsApp — interaction scores, reply-debt tracking and gentle nudges, computed entirely on your device.</p>
+        <div class="rings">
+          <svg viewBox="0 0 70 70" width="70" height="70"><circle cx="35" cy="35" r="28" fill="none" stroke="#23233a" stroke-width="8"/><circle cx="35" cy="35" r="28" fill="none" stroke="#46d398" stroke-width="8" stroke-linecap="round" stroke-dasharray="148 176" transform="rotate(-90 35 35)"/><text x="35" y="41" text-anchor="middle" font-size="18" font-weight="800" fill="#ececf4">84</text></svg>
+          <svg viewBox="0 0 70 70" width="70" height="70"><circle cx="35" cy="35" r="28" fill="none" stroke="#23233a" stroke-width="8"/><circle cx="35" cy="35" r="28" fill="none" stroke="#45d0d0" stroke-width="8" stroke-linecap="round" stroke-dasharray="124 176" transform="rotate(-90 35 35)"/><text x="35" y="41" text-anchor="middle" font-size="18" font-weight="800" fill="#ececf4">70</text></svg>
+          <svg viewBox="0 0 70 70" width="70" height="70"><circle cx="35" cy="35" r="28" fill="none" stroke="#23233a" stroke-width="8"/><circle cx="35" cy="35" r="28" fill="none" stroke="#ffb454" stroke-width="8" stroke-linecap="round" stroke-dasharray="84 176" transform="rotate(-90 35 35)"/><text x="35" y="41" text-anchor="middle" font-size="18" font-weight="800" fill="#ececf4">48</text></svg>
+        </div>
+        <p class="by">Akhil Tripathi · MIT licensed</p>
+      </section>
+
+      <!-- 2 -->
+      <section class="slide">
+        <h2>The gap</h2>
+        <p class="big">Messaging apps track what's <span class="dim">unread</span>.<br />They say nothing about what's <span class="hot">unreplied</span>.</p>
+        <ul class="checks">
+          <li>The friend you used to text weekly, now silent for two months.</li>
+          <li>The reply you've owed your mother for three days.</li>
+          <li>Work chatter that quietly took over your evenings.</li>
+        </ul>
+        <p class="note">We drift, and we don't notice until it's a pattern.</p>
+      </section>
+
+      <!-- 3 -->
+      <section class="slide">
+        <h2>What comit does</h2>
+        <div class="grid">
+          <div class="card"><div class="ic" style="color:#46d398">◎</div><h3>Interaction Score</h3><p>A transparent 0–100 health score per contact — recency, frequency, reciprocity, responsiveness, who-starts.</p></div>
+          <div class="card"><div class="ic" style="color:#ffb454">↩</div><h3>Reply Debt</h3><p>Who you owe a reply, and for how long. "Amma, 3 days."</p></div>
+          <div class="card"><div class="ic" style="color:#6aa8ff">⚖</div><h3>Work-Life Balance</h3><p>Work vs personal split, after-hours work, your late-night pingers.</p></div>
+          <div class="card"><div class="ic" style="color:#d27dff">≀</div><h3>Momentum</h3><p>Who's heating up, who's going quiet — before it's too late.</p></div>
+          <div class="card"><div class="ic" style="color:#45d0d0">✦</div><h3>Nudges</h3><p>One ranked, plain-language to-do list that ties it all together.</p></div>
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="slide">
+        <h2>It just runs</h2>
+        <pre class="term"><span class="c-dim">$ bun run demo</span>
+
+  <span class="c-brand">comit</span>  ·  6 conversations · 321 messages · 90-day window
+
+  <span class="c-rule">-- nudges -----------------------------------------</span>
+  <span class="c-warn">!</span>  Vinay (work) reached you after hours 44x recently.
+  <span class="c-amber">&#8617;</span>  You owe Amma a reply - waiting 3 days.
+  <span class="c-blue">~</span>  Amma is cooling off: ~10.9/wk -> ~2.0/wk. Reach out?
+  <span class="c-cyan">&#9201;</span>  Your replies to Karan take ~15h on average.
+
+  <span class="c-rule">-- balance ----------------------------------------</span>
+  work vs personal   <span class="c-brand">######</span>------------ 35% work
+  after-hours work   <span class="c-warn">66</span> messages (64% of work chatter)</pre>
+        <p class="note">…or open the offline dashboard with <code>bun run web</code>.</p>
+      </section>
+
+      <!-- 5 -->
+      <section class="slide">
+        <h2>Transparent by design</h2>
+        <p class="sub2">No black boxes. The interaction score is a documented, tunable formula:</p>
+        <pre class="formula">score = 100 &#215; ( <span style="color:#46d398">0.30&#183;recency</span>
+              + <span style="color:#45d0d0">0.25&#183;frequency</span>
+              + <span style="color:#d27dff">0.20&#183;reciprocity</span>
+              + <span style="color:#6aa8ff">0.15&#183;responsiveness</span>
+              + <span style="color:#ffb454">0.10&#183;initiation</span> )</pre>
+        <p class="note">Every constant is exported and overridable. Change one, re-run the tests, see exactly what moves.</p>
+      </section>
+
+      <!-- 6 -->
+      <section class="slide privacy">
+        <h2>The part that matters most</h2>
+        <p class="big">Your messages <span class="hot">never leave your device.</span></p>
+        <div class="pills">
+          <span class="p">100% offline</span>
+          <span class="p">no accounts</span>
+          <span class="p">no servers</span>
+          <span class="p">no telemetry</span>
+          <span class="p">zero runtime deps</span>
+          <span class="p">reads only, never writes your chats</span>
+        </div>
+        <p class="note">comit makes <b>no network requests at all</b> — even the dashboard's fonts and charts are self-hosted. Auditable in an afternoon.</p>
+      </section>
+
+      <!-- 7 -->
+      <section class="slide">
+        <h2>How it's built</h2>
+        <pre class="arch">  WhatsApp .txt export
+          |
+          v
+   +--------------+   pure, deterministic   +------------------------+
+   | DataSource   | ----------------------> |  analytics engine      |
+   | export parser|   (no I/O, no clock)    |  score.debt.balance    |
+   +--------------+                         |  .trends.nudges        |
+          ^                                 +-----------+------------+
+   future: live                          +--------------+-----------+
+   Baileys adapter,                      v                          v
+   <span class="c-dim">same interface</span>                    CLI report               Dashboard</pre>
+        <p class="note">One pure core. One I/O seam. A live data source could plug in without touching a line of analytics.</p>
+      </section>
+
+      <!-- 8 -->
+      <section class="slide">
+        <h2>The engineering</h2>
+        <div class="stats">
+          <div><b>0</b><span>runtime dependencies</span></div>
+          <div><b>28</b><span>passing tests</span></div>
+          <div><b>5</b><span>composable analytics</span></div>
+          <div><b>2</b><span>interfaces (CLI + web)</span></div>
+        </div>
+        <ul class="checks">
+          <li>TypeScript, strict mode, runs on Bun with no build step.</li>
+          <li>Pure core → fast, deterministic, exhaustively testable.</li>
+          <li>Clean adapter interface for new sources (Telegram, Signal, iMessage).</li>
+          <li>CI, docs, and a deterministic synthetic-data generator.</li>
+        </ul>
+      </section>
+
+      <!-- 9 -->
+      <section class="slide">
+        <h2>Where it goes</h2>
+        <ul class="checks">
+          <li><b>More importers</b> — Telegram, Signal, iMessage, each just a new <code>DataSource</code>.</li>
+          <li><b>Opt-in live source</b> via Baileys — clearly flagged, never a default, because privacy-first means the user makes that call.</li>
+          <li><b>Weekly digest</b> and a per-contact deep-dive in the dashboard.</li>
+          <li><b>Configurable</b> weights and nudge rules.</li>
+        </ul>
+        <p class="note">Built to be forked. Good first issues are tagged.</p>
+      </section>
+
+      <!-- 10 -->
+      <section class="slide title closing">
+        <h1 class="wordmark">comit</h1>
+        <p class="lead">commit to the people who matter</p>
+        <p class="sub">github.com/takhil/comit · MIT</p>
+        <p class="by">A small daily commit — to your relationships, and your off-hours.</p>
+      </section>
+    </main>
+
+    <div class="dots" id="dots"></div>
+    <div class="hint">&#8592; &#8594; / space to navigate · F for fullscreen</div>
+    <script src="deck.js"></script>
+  </body>
+</html>

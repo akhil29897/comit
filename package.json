@@ -1,0 +1,41 @@
+{
+  "name": "comit",
+  "version": "0.1.0",
+  "description": "Commit to the people who matter. A privacy-first WhatsApp work-life-balance companion that turns a chat export into interaction scores, reply-debt tracking, and gentle nudges — fully offline.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Akhil Tripathi",
+  "homepage": "https://github.com/takhil/comit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takhil/comit.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "work-life-balance",
+    "analytics",
+    "privacy",
+    "cli",
+    "wellbeing",
+    "relationships",
+    "offline-first"
+  ],
+  "bin": {
+    "comit": "src/cli/index.ts"
+  },
+  "scripts": {
+    "comit": "bun run src/cli/index.ts",
+    "demo": "bun run src/cli/index.ts report fixtures/sample-chat.txt --me Akhil",
+    "web": "bun run src/web/server.ts",
+    "demo:web": "COMIT_SOURCE=fixtures/sample-chat.txt COMIT_ME=Akhil bun run src/web/server.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "bun": ">=1.1.0"
+  }
+}

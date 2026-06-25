@@ -1,0 +1,39 @@
+{
+  "me": "Akhil",
+  "windowDays": 90,
+  "now": "latest",
+  "defaultCategory": "unknown",
+  "workHours": {
+    "start": 9,
+    "end": 18,
+    "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "contacts": [
+    {
+      "name": "Riya",
+      "category": "personal"
+    },
+    {
+      "name": "Vinay",
+      "category": "work"
+    },
+    {
+      "name": "Amma",
+      "category": "personal"
+    },
+    {
+      "name": "Karan",
+      "category": "personal"
+    },
+    {
+      "name": "Sourav",
+      "category": "work"
+    }
+  ]
+}
