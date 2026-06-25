@@ -25,9 +25,9 @@
   },
   "scripts": {
     "comit": "bun run src/cli/index.ts",
-    "demo": "bun run src/cli/index.ts report fixtures/sample-chat.txt --me Akhil",
+    "demo": "bun run src/cli/index.ts report fixtures/sample-export --me Akhil --config fixtures/comit.config.json",
     "web": "bun run src/web/server.ts",
-    "demo:web": "COMIT_SOURCE=fixtures/sample-chat.txt COMIT_ME=Akhil bun run src/web/server.ts",
+    "demo:web": "COMIT_SOURCE=fixtures/sample-export COMIT_ME=Akhil COMIT_CONFIG=fixtures/comit.config.json bun run src/web/server.ts",
     "test": "bun test",
     "typecheck": "tsc --noEmit"
   },
