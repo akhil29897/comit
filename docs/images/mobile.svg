@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 800" width="1180" height="800" role="img" aria-label="comit iPhone 15 prototype screens" font-family="system-ui, Arial">
+  <defs>
+    <linearGradient id="m-splash" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#075E54"/><stop offset="0.6" stop-color="#128C7E"/><stop offset="1" stop-color="#25D366"/>
+    </linearGradient>
+    <linearGradient id="m-head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#075E54"/><stop offset="1" stop-color="#128C7E"/>
+    </linearGradient>
+    <linearGradient id="m-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#25D366"/><stop offset="1" stop-color="#25D366" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1180" height="800" fill="#eef1ec"/>
+
+  <!-- ===== Phone 1: Launch ===== -->
+  <g transform="translate(40,40)">
+    <rect width="340" height="720" rx="46" fill="#0c0c0c"/>
+    <rect x="9" y="9" width="322" height="702" rx="38" fill="url(#m-splash)"/>
+    <rect x="125" y="26" width="90" height="22" rx="11" fill="#000"/>
+    <g transform="translate(170,330)" text-anchor="middle" fill="#fff">
+      <text y="-30" font-size="30">✦</text>
+      <text y="36" font-size="56" font-weight="800" letter-spacing="-2">comit</text>
+      <text y="76" font-size="15" fill="#E9F7F1">commit to the people who matter</text>
+    </g>
+    <text x="170" y="650" text-anchor="middle" font-size="12" fill="#D8F5EC">your messages never leave your phone</text>
+    <rect x="125" y="694" width="90" height="4.5" rx="2" fill="#ffffff" opacity="0.6"/>
+  </g>
+  <text x="210" y="788" text-anchor="middle" font-size="14" font-weight="600" fill="#45554f">Launch</text>
+
+  <!-- ===== Phone 2: Today ===== -->
+  <g transform="translate(420,40)">
+    <rect width="340" height="720" rx="46" fill="#0c0c0c"/>
+    <rect x="9" y="9" width="322" height="702" rx="38" fill="#EFEAE2"/>
+    <clipPath id="clip2"><rect x="9" y="9" width="322" height="702" rx="38"/></clipPath>
+    <g clip-path="url(#clip2)">
+      <rect x="9" y="9" width="322" height="92" fill="url(#m-head)"/>
+      <text x="30" y="78" font-size="22" font-weight="800" fill="#fff">comit</text>
+      <!-- summary cards -->
+      <g transform="translate(26,116)">
+        <rect width="92" height="64" rx="12" fill="#fff" stroke="#e7e1d8"/><text x="14" y="34" font-size="22" font-weight="800" fill="#F4A300">2</text><text x="14" y="52" font-size="10" fill="#667781">owed</text>
+        <rect x="100" width="92" height="64" rx="12" fill="#fff" stroke="#e7e1d8"/><text x="114" y="34" font-size="22" font-weight="800" fill="#EA4335">66</text><text x="114" y="52" font-size="10" fill="#667781">after-hrs</text>
+        <rect x="200" width="92" height="64" rx="12" fill="#fff" stroke="#e7e1d8"/><text x="214" y="34" font-size="22" font-weight="800" fill="#008069">35%</text><text x="214" y="52" font-size="10" fill="#667781">work</text>
+      </g>
+      <text x="30" y="210" font-size="11" font-weight="700" letter-spacing="0.5" fill="#008069">NUDGES · WHAT TO DO</text>
+      <!-- bubbles -->
+      <g transform="translate(26,224)" font-size="12.5" fill="#111B21">
+        <rect width="288" height="62" rx="10" fill="#fff"/><circle cx="28" cy="31" r="15" fill="#EA4335"/><text x="28" y="36" text-anchor="middle" font-size="14" fill="#fff">!</text><text x="52" y="26"><tspan font-weight="700">Vinay</tspan> (work) pinged you after</text><text x="52" y="44">hours 44× recently. Mute?</text>
+        <g transform="translate(0,72)"><rect width="288" height="62" rx="10" fill="#fff"/><circle cx="28" cy="31" r="15" fill="#F4A300"/><text x="28" y="36" text-anchor="middle" font-size="13" fill="#fff">↩</text><text x="52" y="26">You owe <tspan font-weight="700">Amma</tspan> a reply —</text><text x="52" y="44">waiting 3 days.</text></g>
+        <g transform="translate(0,144)"><rect width="288" height="62" rx="10" fill="#fff"/><circle cx="28" cy="31" r="15" fill="#34B7F1"/><text x="28" y="36" text-anchor="middle" font-size="14" fill="#fff">≀</text><text x="52" y="26"><tspan font-weight="700">Amma</tspan> is cooling off:</text><text x="52" y="44">~10.9 → ~2.0 /wk. Reach out?</text></g>
+      </g>
+      <!-- tab bar -->
+      <rect x="9" y="641" width="322" height="70" fill="#fff" stroke="#e6e6e6"/>
+      <g text-anchor="middle" font-size="10" font-weight="600">
+        <text x="80" y="690" fill="#008069">★ Today</text>
+        <text x="170" y="690" fill="#8696A0">People</text>
+        <text x="260" y="690" fill="#8696A0">Balance</text>
+      </g>
+    </g>
+    <rect x="125" y="26" width="90" height="22" rx="11" fill="#000"/>
+    <rect x="125" y="694" width="90" height="4.5" rx="2" fill="#000" opacity="0.35"/>
+  </g>
+  <text x="590" y="788" text-anchor="middle" font-size="14" font-weight="600" fill="#45554f">Today · nudges</text>
+
+  <!-- ===== Phone 3: People ===== -->
+  <g transform="translate(800,40)">
+    <rect width="340" height="720" rx="46" fill="#0c0c0c"/>
+    <rect x="9" y="9" width="322" height="702" rx="38" fill="#EFEAE2"/>
+    <clipPath id="clip3"><rect x="9" y="9" width="322" height="702" rx="38"/></clipPath>
+    <g clip-path="url(#clip3)">
+      <rect x="9" y="9" width="322" height="92" fill="url(#m-head)"/>
+      <text x="30" y="78" font-size="22" font-weight="800" fill="#fff">People</text>
+      <rect x="26" y="116" width="288" height="486" rx="16" fill="#fff" stroke="#e7e1d8"/>
+      <g transform="translate(40,134)">
+        <!-- rows -->
+        <g><circle cx="22" cy="22" r="20" fill="none" stroke="#e7e1d8" stroke-width="4"/><circle cx="22" cy="22" r="20" fill="none" stroke="#25D366" stroke-width="4" stroke-linecap="round" stroke-dasharray="105 126" transform="rotate(-90 22 22)"/><text x="22" y="27" text-anchor="middle" font-size="13" font-weight="800" fill="#111B21">84</text><text x="56" y="18" font-size="15" font-weight="700" fill="#111B21">Riya</text><text x="56" y="35" font-size="11" fill="#667781">thriving · today</text></g>
+        <g transform="translate(0,76)"><circle cx="22" cy="22" r="20" fill="none" stroke="#e7e1d8" stroke-width="4"/><circle cx="22" cy="22" r="20" fill="none" stroke="#25D366" stroke-width="4" stroke-linecap="round" stroke-dasharray="99 126" transform="rotate(-90 22 22)"/><text x="22" y="27" text-anchor="middle" font-size="13" font-weight="800" fill="#111B21">79</text><text x="56" y="18" font-size="15" font-weight="700" fill="#111B21">Vinay</text><text x="56" y="35" font-size="11" fill="#667781">thriving · work</text><rect x="186" y="6" width="58" height="20" rx="10" fill="#25D366"/><text x="215" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">owe 13h</text></g>
+        <g transform="translate(0,152)"><circle cx="22" cy="22" r="20" fill="none" stroke="#e7e1d8" stroke-width="4"/><circle cx="22" cy="22" r="20" fill="none" stroke="#128C7E" stroke-width="4" stroke-linecap="round" stroke-dasharray="88 126" transform="rotate(-90 22 22)"/><text x="22" y="27" text-anchor="middle" font-size="13" font-weight="800" fill="#111B21">70</text><text x="56" y="18" font-size="15" font-weight="700" fill="#111B21">Amma</text><text x="56" y="35" font-size="11" fill="#667781">steady · 4d ago</text><rect x="192" y="6" width="52" height="20" rx="10" fill="#25D366"/><text x="218" y="20" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">owe 3d</text></g>
+        <g transform="translate(0,228)"><circle cx="22" cy="22" r="20" fill="none" stroke="#e7e1d8" stroke-width="4"/><circle cx="22" cy="22" r="20" fill="none" stroke="#128C7E" stroke-width="4" stroke-linecap="round" stroke-dasharray="73 126" transform="rotate(-90 22 22)"/><text x="22" y="27" text-anchor="middle" font-size="13" font-weight="800" fill="#111B21">58</text><text x="56" y="18" font-size="15" font-weight="700" fill="#111B21">Karan</text><text x="56" y="35" font-size="11" fill="#667781">steady · 2d ago</text></g>
+        <g transform="translate(0,304)"><circle cx="22" cy="22" r="20" fill="none" stroke="#e7e1d8" stroke-width="4"/><circle cx="22" cy="22" r="20" fill="none" stroke="#128C7E" stroke-width="4" stroke-linecap="round" stroke-dasharray="60 126" transform="rotate(-90 22 22)"/><text x="22" y="27" text-anchor="middle" font-size="13" font-weight="800" fill="#111B21">48</text><text x="56" y="18" font-size="15" font-weight="700" fill="#111B21">DARPAN Crew</text><text x="56" y="35" font-size="11" fill="#667781">steady · group</text></g>
+      </g>
+      <rect x="9" y="641" width="322" height="70" fill="#fff" stroke="#e6e6e6"/>
+      <g text-anchor="middle" font-size="10" font-weight="600">
+        <text x="80" y="690" fill="#8696A0">Today</text>
+        <text x="170" y="690" fill="#008069">★ People</text>
+        <text x="260" y="690" fill="#8696A0">Balance</text>
+      </g>
+    </g>
+    <rect x="125" y="26" width="90" height="22" rx="11" fill="#000"/>
+    <rect x="125" y="694" width="90" height="4.5" rx="2" fill="#000" opacity="0.35"/>
+  </g>
+  <text x="970" y="788" text-anchor="middle" font-size="14" font-weight="600" fill="#45554f">People · scores</text>
+</svg>

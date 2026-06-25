@@ -126,6 +126,16 @@ Individual views are available too: `bun run comit scores <path>`, `debts`, `nud
 
 Score rings per contact, a work/personal donut, after-hours stats, a weekday rhythm, and the same ranked nudges — all rendered from the exact same pure engine the CLI uses.
 
+## On your phone
+
+comit is designed as a WhatsApp-style mobile companion. A clickable **iPhone 15 prototype** lives in [`prototype/`](prototype/index.html) — open it in any browser (it's a self-contained, zero-dependency page):
+
+<p align="center">
+  <img src="docs/images/mobile.svg" alt="comit iPhone 15 prototype — Launch, Today and People screens" width="100%" />
+</p>
+
+Four screens — Launch, **Today** (your nudges as chat bubbles), **People** (relationships as a chat-style list with scores), and **Balance** (work-life breakdown) — with the familiar green header, chat-wallpaper background, and bottom tab bar.
+
 ## How it works
 
 ```
@@ -187,6 +197,7 @@ comit/
 ├── fixtures/                 # synthetic demo exports + sample config
 ├── scripts/                  # deterministic fixture generator
 ├── docs/                     # architecture, scoring, privacy, usage, roadmap
+├── prototype/                # WhatsApp-style iPhone 15 prototype (zero-dep)
 └── presentation/             # reveal.js deck (+ exported .pptx)
 ```
 
